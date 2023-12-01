@@ -5,6 +5,7 @@ import { ProductsIndex } from "./ProductsIndex";
 import { ProductsShow } from "./ProductsShow";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
+import { Login } from "./Login";
 
 export function Content() {
   const [products, setProducts] = useState([]);
@@ -37,6 +38,7 @@ export function Content() {
       <Routes>
         <Route path="/" element={<ProductsIndex products={products} onShowProduct={handleShowProduct} />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
 
       <Modal show={isProductShowVisible} onClose={handleClose}>
